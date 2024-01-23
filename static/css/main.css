@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+h4 {
+    color: #333;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 9px; /* Increased padding */
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* New CSS to set column widths */
+th:nth-child(1), td:nth-child(1) { /* For Task column */
+    width: 500%;
+}
+
+th:nth-child(2), td:nth-child(2) { /* For Added column */
+    width: 300%;
+}
+
+th:nth-child(3), td:nth-child(3) { /* For Actions column */
+    width: 400%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    background-color: #4CAF50;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+a:hover {
+    background-color: #45a049;
+}
+
+form {
+    margin-top: 20px;
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.action-link {
+    display: inline-block;
+    padding: 5px 10px; /* Reduce padding as needed */
+    font-size: 0.8em; /* Smaller font size */
+    color: white;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 2px; /* Optional: Adds a little space around the link */
+}
+
+.action-link:hover {
+    background-color: #45a049; /* Slightly darker on hover */
+}
