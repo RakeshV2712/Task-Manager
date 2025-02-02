@@ -1,6 +1,6 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
     margin: 0;
     padding: 0;
     display: flex;
@@ -9,103 +9,122 @@ body {
     height: 100vh;
 }
 
+
 .content {
     background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
 }
+
+.content:hover {
+    transform: scale(1.02);
+}
+
 
 h1 {
     color: #333;
-    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 10px;
 }
 
 h4 {
-    color: #333;
-    text-align: center;
+    color: #666;
+    font-size: 1.2em;
 }
+
 
 table {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 
-table, th, td {
+th, td {
     border: 1px solid #ddd;
-    padding: 9px; /* Increased padding */
+    padding: 12px;
+    text-align: left;
 }
 
 th {
-    background-color: #4CAF50;
+    background: #4CAF50;
     color: white;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-/* New CSS to set column widths */
-th:nth-child(1), td:nth-child(1) { /* For Task column */
-    width: 500%;
-}
-
-th:nth-child(2), td:nth-child(2) { /* For Added column */
-    width: 300%;
-}
-
-th:nth-child(3), td:nth-child(3) { /* For Actions column */
-    width: 400%;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-    background-color: #4CAF50;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-right: 5px;
-}
-
-a:hover {
-    background-color: #45a049;
+td {
+    background: #f9f9f9;
 }
 
 form {
     margin-top: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
+
 
 input[type="text"] {
-    padding: 10px;
+    padding: 12px;
     width: 70%;
-    margin-right: 10px;
-    border-radius: 5px;
+    border-radius: 6px;
     border: 1px solid #ddd;
+    outline: none;
+    transition: all 0.3s ease;
 }
 
-input[type="submit"] {
-    padding: 10px 20px;
-    border-radius: 5px;
+input[type="text"]:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.4);
+}
+
+
+input[type="submit"], .btn {
+    padding: 12px 18px;
+    border-radius: 6px;
     border: none;
     background-color: #4CAF50;
     color: white;
+    font-weight: bold;
     cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover, .btn:hover {
     background-color: #45a049;
 }
 
+
 .action-link {
     display: inline-block;
-    padding: 5px 10px; /* Reduce padding as needed */
-    font-size: 0.8em; /* Smaller font size */
+    padding: 8px 12px;
+    font-size: 0.9em;
+    font-weight: bold;
     color: white;
-    background-color: #4CAF50;
-    border-radius: 5px;
+    background: #4CAF50;
+    border-radius: 6px;
     text-decoration: none;
-    margin: 2px; /* Optional: Adds a little space around the link */
+    transition: background 0.3s ease;
 }
 
 .action-link:hover {
-    background-color: #45a049; /* Slightly darker on hover */
+    background: #45a049;
+}
+
+@media (max-width: 600px) {
+    .content {
+        width: 90%;
+    }
+
+    input[type="text"] {
+        width: 100%;
+    }
 }
